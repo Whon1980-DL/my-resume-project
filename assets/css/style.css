@@ -85,3 +85,10 @@ header {
     color: #ffffff;
     height: 120px;
 }
+
+.menuitem a i {
+    padding-top: 22px;
+    display: block;
+    color: #fafafa;
+    font-size: 26px;
+}
