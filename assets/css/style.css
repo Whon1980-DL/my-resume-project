@@ -38,6 +38,10 @@ h1,h2,h3,h4 {
     color: #fafafa;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
 /* ------------------------------------------------- Heading */
 
 header {
@@ -136,6 +140,8 @@ header {
 footer {
     background-color: #525252;
     color: #fafafa;
+    /* min-height helps keep the semetry of there is more viewport, 
+    it can expand but will not become smaller than 120px */
     min-height: 120px;
     margin: 0;
 }
