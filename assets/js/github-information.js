@@ -17,13 +17,13 @@ function userInformationHTML(user) {
 
 function repoInformationHTML(repos) {
     if (repos.length == 0) {
-        return `<div class="clearfix repo-list">No repos!</div>`
+        return `<div class="clearfix repo-list">No repos!</div>`;
     }
 
     var listItemsHTML = repos.map(function(repo) {
         return `<li>
                     <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-                </li>`
+                </li>`;
     });
 
     return `<div class="clearfix repo-list">
@@ -61,7 +61,7 @@ function fetchGitHubInformation(event) {
             var userData = firstResponse[0];
             var repoData = secondResponse[0];
             $("#gh-user-data").html(userInformationHTML(userData));
-            $("#gh-repo-data").html(repoInformationHTMLInformationHTML(repoData));
+            $("#gh-repo-data").html(repoInformationHTML(repoData));
         }, function(errorResponse) {
             if (errorResponse.status === 404) {
                 $("#gh-user-data").html(`<h2>No info found for user ${username}</h2>`);
@@ -76,6 +76,7 @@ function fetchGitHubInformation(event) {
             }
         });
 }
+
 
 // This is to have the octocat github display as a default when the DOM is fully loaded
 $(document).ready(fetchGitHubInformation);
