@@ -37,6 +37,9 @@ function repoInformationHTML(repos) {
 }
 
 function fetchGitHubInformation(event) {
+    // the code be;ow is to clear the two div when the fetch funciton is called is previous info is not seen when the input box is empty
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
 
     var username = $("#gh-username").val();
     if (!username) {
@@ -69,4 +72,7 @@ function fetchGitHubInformation(event) {
             }
         });
 }
+
+// This is to have the octocat github display as a default when the DOM is fully loaded
+$(document).ready(fetchGitHubInformation);
 
